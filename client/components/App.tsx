@@ -6,7 +6,6 @@ import Navbar from './Navbar'
 import Searchbar from './Searchbar'
 
 const App = () => {
-  const [greeting, setGreeting] = useState('')
   const [count, setCount] = useState(0)
   const [isError, setIsError] = useState(false)
   const [component, setComponent] = useState("landing")
