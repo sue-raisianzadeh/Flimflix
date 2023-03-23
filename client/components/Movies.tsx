@@ -35,8 +35,10 @@ const Movies = (props: Props) => {
         {movieList.length &&
           movieList.map((movie: Movie, i) => (
             <div key={i}>
+
               <h1>{movie.title}</h1>
               <h3>Rates: {movie.vote_average}</h3>
+
               <img src={imageBaseUrl + movie.poster_path} alt="" />
             </div>
           ))}

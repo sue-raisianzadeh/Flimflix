@@ -30,6 +30,9 @@ h2 {
   background-color: rgb #5A2971;
 }
 
+/* .logo {
+  background-color: #321142;
+} */
 
 
 /* Movie List Style */
@@ -37,11 +40,13 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* margin: 3rem; */
+
+
 
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
+
 }
 
 .list__container>div {
@@ -64,24 +69,25 @@ h2 {
   height: 70%;
 }
 
+.movie_title {
+  font-family: 'Roboto', sans-serif;
+}
+
 
 
 /* NavBar Style */
 
 
-
-
-
 .sidenav {
 
   background-color: #321142;
-  color: #864CA1;
+  color: rgb(134, 76, 161);
   width: 150px;
   float: left;
   display: inline;
-
   margin: 0;
   padding: 0;
+
   width: 200px;
   background-color: #f1f1f1;
   position: fixed;
@@ -144,12 +150,14 @@ h2 {
     align-items: center;
   }
 
+
   .searchBar {
     height: 40px;
     width: 80%;
     border: 1px solid grey;
     border-radius: 20px;
   }
+
 
   .searchBar:focus {
     outline: none;
@@ -181,4 +189,5 @@ h2 {
       float: none;
     }
   }
+
 }
