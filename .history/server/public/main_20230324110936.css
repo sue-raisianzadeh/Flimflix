@@ -69,10 +69,10 @@ body {
 }
 
 .sumbitButton{
-width: 30px;
-height: 30px;
+width: 25px;
+height: 25px;
 position: absolute;
-right:270px;
+right:260px;
 background-color: transparent;
 border:none
 }

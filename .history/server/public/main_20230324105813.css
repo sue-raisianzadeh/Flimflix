@@ -52,27 +52,8 @@ body {
 
 /* serachBar style */
 
-.searchForm{
-  display: flex;
-  position: relative;
-  align-items: center;
-}
-
 .searchBar{
-  height: 40px;
-  width: 80%;
-  border:1px solid grey;
-  border-radius: 20px;
-}
-.searchBar:focus{
-  outline: none;
+  height: 30px;
 }
 
-.sumbitButton{
-width: 30px;
-height: 30px;
-position: absolute;
-right:270px;
-background-color: transparent;
-border:none
-}
+.sumbitButton

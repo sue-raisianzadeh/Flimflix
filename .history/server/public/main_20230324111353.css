@@ -60,7 +60,7 @@ body {
 
 .searchBar{
   height: 40px;
-  width: 80%;
+  width: 100%;
   border:1px solid grey;
   border-radius: 20px;
 }
@@ -72,7 +72,7 @@ body {
 width: 30px;
 height: 30px;
 position: absolute;
-right:270px;
+right:260px;
 background-color: transparent;
 border:none
 }
