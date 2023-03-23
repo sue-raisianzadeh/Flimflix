@@ -1,3 +1,4 @@
+
 /* Global Styles */
 
 * {
@@ -15,7 +16,7 @@ body {
 }
 
 
-/* Movie List */
+/* Movie List Style */
 .list__container {
   display: flex;
   justify-content: space-between;
@@ -34,3 +35,20 @@ body {
 .list__container > div > * {
   margin-bottom: 1.5rem;
 }
+
+
+//NavBar Style
+.sidenav{
+
+  background-color: darkslategray;
+  color: aliceblue;
+  width: 150px;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+
+
