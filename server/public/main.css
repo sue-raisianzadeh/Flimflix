@@ -1,3 +1,7 @@
+/* Import Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Roboto:wght@400;500;700;900&display=swap');
+
 
 /* Global Styles */
 
@@ -11,9 +15,21 @@ html {
   font-size: 62.5%;
 }
 
+
 body {
   font-size: 1.6rem;
 }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Landing Page Style */
+
+.backgroud {
+  background-color: rgb #5A2971;
+}
+
 
 
 /* Movie List Style */
@@ -25,23 +41,37 @@ body {
 }
 
 .list__container > div {
-  width: 30%;
+  width: 25%;
   margin-bottom: 3rem;
   border: 1px solid #FF3F00;
   padding: 1rem;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .list__container > div > * {
   margin-bottom: 1.5rem;
 }
 
+.list__container img {
+  width: 100%;
+  height: 70%;
+}
+
+
 
 /* NavBar Style */
+
+
+
+/* NavBar Style */
+
 .sidenav{
 
-  background-color: darkslategray;
-  color: aliceblue;
+  background-color: #321142;
+  color: #864CA1;
   width: 150px;
   float: left;
   display: inline;
@@ -49,6 +79,7 @@ body {
   padding: 0;
   margin-right: 10px;
 }
+
 
 /* serachBar style */
 
@@ -76,3 +107,12 @@ right:270px;
 background-color: transparent;
 border:none
 }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
