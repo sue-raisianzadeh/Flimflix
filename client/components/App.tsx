@@ -4,6 +4,8 @@ import Landing from './Landing'
 import Movies from './Movies'
 import Navbar from './Navbar'
 import Searchbar from './Searchbar'
+import Movie from './Movie'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
 
@@ -18,7 +20,7 @@ const App = () => {
       })
       .catch((err) => {
         console.log(err)
-        setIsError(true)
+        
       })
 
   
@@ -30,6 +32,10 @@ const App = () => {
       <Navbar />
       <Searchbar />
       {component === "landing" ? <Landing /> : <Movies />}
+      <Routes>
+        <Route path="/movies/:id" element={<Movie />} />
+      </Routes>
+      
     </>
   )
 }

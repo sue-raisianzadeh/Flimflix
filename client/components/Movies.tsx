@@ -1,8 +1,10 @@
 import React from 'react'
+import Movie from './Movie'
+import { Link } from 'react-router-dom'
 
 const movieList = [
   {
-    id: '123',
+    id: '236',
     title: 'Superman',
     original_language: 'English',
     poster_path: 'https://123.123',
@@ -45,6 +47,7 @@ const Movies = () => {
             <h2>Language: {movie.original_language}</h2>
             <img src="" alt="" />
             <p>Overview: {movie.overview}</p>
+            <Link to={`/movies/${movie.id}`}>More Details</Link>
           </div>
         ))}
       </div>
