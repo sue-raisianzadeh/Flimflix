@@ -1,3 +1,6 @@
+
+import Movie from './Movie'
+import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Movie } from '../../Model/Movie'
@@ -13,6 +16,7 @@ const Movies = (props: Props) => {
   const [genre, setGenre] = useState(0)
   const {genre: param}  = useParams()
 
+
   useEffect(() => {
     console.log(param)
     setGenre(Number(param))
@@ -23,9 +27,11 @@ const Movies = (props: Props) => {
       })
     }
   }, [param, genre])
+  
   return (
     <div>
       <div className="list__container">
+
         {movieList.length &&
           movieList.map((movie: Movie, i) => (
             <div key={i}>
