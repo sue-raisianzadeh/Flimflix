@@ -5,6 +5,7 @@ export interface Movie {
   poster_path: string
   overview: string
   vote_average: number
+  adult: boolean
 }
 
 

@@ -33,6 +33,7 @@ const Movies = (props: Props) => {
       <div className="list__container">
 
         {movieList.length &&
+
           movieList.map((movie: Movie, i) => (
             <div key={i}>
 
@@ -42,6 +43,7 @@ const Movies = (props: Props) => {
               <img src={imageBaseUrl + movie.poster_path} alt="" />
             </div>
           ))}
+
       </div>
     </div>
   )
