@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Route, Routes, useParams } from 'react-router-dom'
 import { getPopularMovies, getMovieByGenre } from '../apiClient'
 import Landing from './Landing'
 import Movies from './Movies'
@@ -9,18 +10,16 @@ import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
 
-  const [component, setComponent] = useState("movie")
+
+  
 
   useEffect(() => {
 
     getPopularMovies()
-      .then((movies) => {
-        console.log(movies);
-        
-      })
+
       .catch((err) => {
         console.log(err)
-        
+
       })
 
   
@@ -31,11 +30,19 @@ const App = () => {
     <>
       <Navbar />
       <Searchbar />
-      {component === "landing" ? <Landing /> : <Movies />}
-      <Routes>
-        <Route path="/movies/:id" element={<Movie />} />
-      </Routes>
+
+
+
+
       
+
+      <Routes >
+        <Route path='/' element={<Landing />} />
+        <Route path='/:genre' element={<Movies setApi={(genre: number) => getMovieByGenre(genre)} />} />
+                <Route path="/movies/:id" element={<Movie />} />
+
+      </Routes>
+
     </>
   )
 }
