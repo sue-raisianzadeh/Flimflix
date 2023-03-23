@@ -5,8 +5,6 @@ import Movies from './Movies'
 const Landing = () => {
   return (
     <div>
-      
-
       <Movies setApi={getPopularMovies} />
     </div>
   )
