@@ -3,6 +3,9 @@ import React from 'react'
 const Searchbar = () => {
   return (
     <div>
+      <div>
+        <img className='logo' src="/images/devflicks-logo/png/logo-no-background.png"/>
+      </div>
       <form className='searchForm' >
           <input className='searchBar' type="text" />
         <button className='sumbitButton' type='submit'>
