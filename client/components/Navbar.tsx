@@ -8,9 +8,9 @@ const Navbar = () => {
     <div className="sidenav">
       <nav>
         <ul>
-          {}
+        Navbar
           <li>
-            <Link to={`/movie/${genreList}`}>{genreList}</Link>
+            <a >{genreList[0]}</a>
           </li>
         </ul>
       </nav>

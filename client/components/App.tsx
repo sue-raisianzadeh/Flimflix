@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import { getPopularMovies, getMovieByGenre } from '../apiClient'
 import Landing from './Landing'
 import Movies from './Movies'
@@ -7,6 +8,7 @@ import Searchbar from './Searchbar'
 
 const App = () => {
   const [component, setComponent] = useState("movie")
+  
   useEffect(() => {
 
     getPopularMovies()
@@ -27,7 +29,10 @@ const App = () => {
     <>
       <Navbar />
       <Searchbar />
-      {component === "landing" ? <Landing /> : <Movies />}
+      <Routes >
+        <Route path='/' element={<Landing />} />
+        <Route path='/:genre' element={<Movies />} />
+      </Routes>
     </>
   )
 }
