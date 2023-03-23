@@ -1,8 +1,14 @@
 import React from 'react'
+import { getPopularMovies } from '../apiClient'
+import Movies from './Movies'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div>
+      
+
+      <Movies setApi={getPopularMovies} />
+    </div>
   )
 }
 
