@@ -1,3 +1,7 @@
+/* Import Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Roboto:wght@400;500;700;900&display=swap');
+
 
 /* Global Styles */
 
@@ -11,9 +15,21 @@ html {
   font-size: 62.5%;
 }
 
+
 body {
   font-size: 1.6rem;
 }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Landing Page Style */
+
+.backgroud {
+  background-color: rgb #5A2971;
+}
+
 
 
 /* Movie List Style */
@@ -22,27 +38,48 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   /* margin: 3rem; */
-/*edit*/
+
   margin-left: 200px;
   padding: 1px 16px;
-  /* height: 1000px; */
+  height: 1000px; 
 }
 
 .list__container > div {
-  width: 30%;
+  width: 25%;
   margin-bottom: 3rem;
   border: 1px solid #FF3F00;
   padding: 1rem;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .list__container > div > * {
   margin-bottom: 1.5rem;
 }
 
+.list__container img {
+  width: 100%;
+  height: 70%;
+}
 
-/*NavBar Style*/
+
+
+/* NavBar Style */
+
+
+
+
+
 .sidenav{
+
+  background-color: #321142;
+  color: #864CA1;
+  width: 150px;
+  float: left;
+  display: inline;
+
   margin: 0;
   padding: 0;
   width: 200px;
@@ -53,6 +90,7 @@ body {
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
 }
+
 
 
 /* sidenav links */
@@ -91,6 +129,41 @@ body {
   }
   .sidenav a {float: left;}
   div.content {margin-left: 0;}
+
+/* serachBar style */
+
+.searchForm{
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.searchBar{
+  height: 40px;
+  width: 80%;
+  border:1px solid grey;
+  border-radius: 20px;
+}
+.searchBar:focus{
+  outline: none;
+}
+
+.sumbitButton{
+width: 30px;
+height: 30px;
+position: absolute;
+right:270px;
+background-color: transparent;
+border:none
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
