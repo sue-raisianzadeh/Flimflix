@@ -20,14 +20,19 @@ const Movies = (props: Props) => {
     <div>
       <div className="list__container">
         {movieList.length &&
-          movieList.map((movie: Movie, i) => (
-            <div key={i}>
-              <h1>Title: {movie.title}</h1>
-              <h2>Language: {movie.original_language}</h2>
-              <img src={imageBaseUrl + movie.poster_path} alt="" />
-              <p>Rates: {movie.vote_average}</p>
-            </div>
-          ))}
+          movieList.map((movie: Movie, i) => {
+            if (movie.adult === false) {
+              return (
+                <div key={i}>
+                  <h1></h1>
+                  <h1>Title: {movie.title}</h1>
+                  <h2>Language: {movie.original_language}</h2>
+                  <img src={imageBaseUrl + movie.poster_path} alt="" />
+                  <p>Rates: {movie.vote_average}</p>
+                </div>
+              )
+            }
+          })}
       </div>
     </div>
   )
