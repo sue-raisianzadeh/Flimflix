@@ -6,11 +6,9 @@ import Navbar from './Navbar'
 import Searchbar from './Searchbar'
 
 const App = () => {
-  const [greeting, setGreeting] = useState('')
-  const [count, setCount] = useState(0)
-  const [isError, setIsError] = useState(false)
-  const [component, setComponent] = useState("landing")
+  const [component, setComponent] = useState("movie")
   useEffect(() => {
+
     getPopularMovies()
       .then((movies) => {
         console.log(movies);
@@ -20,6 +18,9 @@ const App = () => {
         console.log(err)
         setIsError(true)
       })
+
+  
+
   }, [])
 
   return (
@@ -27,16 +28,6 @@ const App = () => {
       <Navbar />
       <Searchbar />
       {component === "landing" ? <Landing /> : <Movies />}
-
-
-      {count}
-      <h1>{greeting}</h1>
-      {isError && (
-        <p style={{ color: 'red' }}>
-          There was an error retrieving the greeting.
-        </p>
-      )}
-      <button onClick={() => setCount(count + 1)}>Click</button>
     </>
   )
 }
