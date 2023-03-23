@@ -7,18 +7,15 @@ import Navbar from './Navbar'
 import Searchbar from './Searchbar'
 
 const App = () => {
-  const [component, setComponent] = useState("movie")
+
   
   useEffect(() => {
 
     getPopularMovies()
-      .then((movies) => {
-        console.log(movies);
-        
-      })
+
       .catch((err) => {
         console.log(err)
-        setIsError(true)
+
       })
 
   
@@ -31,7 +28,7 @@ const App = () => {
       <Searchbar />
       <Routes >
         <Route path='/' element={<Landing />} />
-        <Route path='/:genre' element={<Movies />} />
+        <Route path='/:genre' element={<Movies setApi={() => getMovieByGenre(18)} />} />
       </Routes>
     </>
   )
