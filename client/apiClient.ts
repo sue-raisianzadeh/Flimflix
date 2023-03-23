@@ -20,7 +20,7 @@ export async function getMovieByGenre(genreID: number) {
 
 export async function getMovieByID(id: number) {
   const response = await request.get(`https://api.themoviedb.org/3/movie/${id}?api_key=ccc52bbb3a8aacd51522e744f91ea5a0&language=en-US`)
-  return response.body.results
+  return response.body
 } 
 
 // Genre IDs:

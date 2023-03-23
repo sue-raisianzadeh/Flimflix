@@ -8,7 +8,10 @@ const Movie = () => {
   const {id} = useParams()
   const parsedId=Number(id)
   const [ID,setID]=useState(parsedId)
-  const [movieData, setMovieData]=useState('')
+  const [data, setData]=useState('')
+
+  
+  
 
   useEffect(() => {
     // getMovieByID(Number(id)).then((data) => {console.log(data)}).catch((err) => {
@@ -17,7 +20,7 @@ const Movie = () => {
     // })
     getMovieByID(ID)
       .then((movies) => {
-        setMovieData(movies)
+        setData(movies)
         console.log(movies)
         
       })
@@ -33,6 +36,13 @@ const Movie = () => {
   
   return (
     <div>
+      <h3>{data.title}</h3>
+      <p><i>{data.tagline}</i></p>
+      <p>Popularity: {data.popularity}</p>
+      <p>Date of release: {data.release_date}</p>
+      <p>Overview: {data.overview}</p>
+      
+
     </div>
   )
 }
