@@ -28,7 +28,7 @@ const App = () => {
       <Searchbar />
       <Routes >
         <Route path='/' element={<Landing />} />
-        <Route path='/:genre' element={<Movies setApi={() => getMovieByGenre(18)} />} />
+        {/* <Route path='/:genre' element={<Movies setApi={() => getMovieByGenre(18)} />} /> */}
       </Routes>
     </>
   )
