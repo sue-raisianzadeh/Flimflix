@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getGreeting } from '../apiClient'
+import { getPopularMovies, getMovieByGenre } from '../apiClient'
 import Landing from './Landing'
 import Movies from './Movies'
 import Navbar from './Navbar'
@@ -11,17 +11,16 @@ const App = () => {
   const [isError, setIsError] = useState(false)
   const [component, setComponent] = useState("landing")
   useEffect(() => {
-    getGreeting()
-      .then((greeting) => {
-        console.log(greeting)
-        setGreeting(greeting)
-        setIsError(false)
+    getPopularMovies()
+      .then((movies) => {
+        console.log(movies);
+        
       })
       .catch((err) => {
         console.log(err)
         setIsError(true)
       })
-  }, [count])
+  }, [])
 
   return (
     <>
