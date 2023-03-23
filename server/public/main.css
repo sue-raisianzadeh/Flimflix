@@ -53,6 +53,7 @@ body {
 /* serachBar style */
 
 .searchForm{
+  width: 80%;
   display: flex;
   position: relative;
   align-items: center;
@@ -60,9 +61,11 @@ body {
 
 .searchBar{
   height: 40px;
-  width: 80%;
+  width: 100%;
+  padding:20px;
   border:1px solid grey;
   border-radius: 20px;
+  font-size: 20px;
 }
 .searchBar:focus{
   outline: none;
@@ -72,7 +75,7 @@ body {
 width: 30px;
 height: 30px;
 position: absolute;
-right:270px;
+right:10px;
 background-color: transparent;
 border:none
 }
