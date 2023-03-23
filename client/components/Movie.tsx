@@ -40,6 +40,7 @@ const Movie = () => {
       <p><i>{data.tagline}</i></p>
       <p>Popularity: {data.popularity}</p>
       <p>Date of release: {data.release_date}</p>
+      <p>Runtime: {data.runtime} minutes</p>
       <p>Overview: {data.overview}</p>
       
 
