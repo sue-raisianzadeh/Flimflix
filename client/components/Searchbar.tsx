@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Searchbar = () => {
+interface Props {
+  search: any
+  setSearch: any
+}
+
+const Searchbar = (props: Props) => {
+
+
+
+  // useEffect(() => {
+  //   console.log(props.search)
+  // }, [props.search])
+
   return (
     <div>
       <div>
@@ -11,7 +23,7 @@ const Searchbar = () => {
         />
       </div>
       <form className="searchForm">
-        <input className="searchBar" type="text" />
+        <input className="searchBar" type="text" value={props.search} onChange={(e) => props.setSearch(() => e.target.value)} />
         <button className="sumbitButton" type="submit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
