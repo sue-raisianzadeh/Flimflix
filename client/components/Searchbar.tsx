@@ -14,7 +14,8 @@ const Searchbar = () => {
       <hr></hr>
       <div className="subtitle">
         <h2>
-          Need help deciding what to watch? Choose a genre for suggestions!
+          🍿 Need help deciding what to watch? Choose a genre for suggestions!
+          🍿
         </h2>
       </div>
       <div>
