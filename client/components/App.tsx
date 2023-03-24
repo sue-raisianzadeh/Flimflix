@@ -16,20 +16,25 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <Searchbar />
-      
-      <Routes>
-        <Route path="/" element={<Landing />} />
 
-        <Route
-          path="/:genre"
-          element={
-            <Movies setApi={(genre: number) => getMovieByGenre(genre)} />
-          }
-        />
-        <Route path="/movies/:id" element={<Movie />} />
-      </Routes>
+      <div className="background">
+        <Searchbar />
+
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Landing />} />
+
+          <Route
+            path="/:genre"
+            element={
+              <Movies setApi={(genre: number) => getMovieByGenre(genre)} />
+            }
+          />
+          <Route path="/movies/:id" element={<Movie />} />
+        </Routes>
+      </div>
+
     </>
   )
 }
