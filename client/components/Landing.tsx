@@ -3,11 +3,27 @@ import React from 'react'
 import { getPopularMovies } from '../apiClient'
 import Movies from './Movies'
 
-const Landing = () => {
+
+interface Props {
+  search: string
+}
+
+
+const Landing = (props: Props) => {
+
+
   return (
     <div>
       
-      <Movies setApi={() => getPopularMovies()} />
+
+
+
+
+
+      <Movies search={props.search} setApi={() => getPopularMovies()} />
+
+
+
     </div>
   )
 }

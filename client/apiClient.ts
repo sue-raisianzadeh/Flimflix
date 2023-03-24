@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-import {Movie} from '../Model/Movie'
+import Movie from './components/Movie'
 
 export function getGreeting(): Promise<string> {
   return request.get('/greeting').then((res) => res.body.greeting)
@@ -13,7 +13,7 @@ return response.body.results
 }
 
 export async function getMovieByGenre(genreID: number) {
-  const pageNum= Math.floor(Math.random()*20)
+  const pageNum= Math.floor((Math.random()*20)+1)
   const response = await request.get(`https://api.themoviedb.org/3/discover/movie?api_key=ccc52bbb3a8aacd51522e744f91ea5a0&with_genres=${genreID}&page=${pageNum}`)
   return response.body.results
 }

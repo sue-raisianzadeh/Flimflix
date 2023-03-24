@@ -145,7 +145,7 @@ h3{
   width: 75%;
   position: relative;
   align-items: center;
-  display: block;
+  display:flex;
   margin: 10px auto;
 }
 
@@ -218,7 +218,7 @@ border:none
 
   /* serachBar style */
 
-  .searchForm {
+  /* .searchForm {
     display: flex;
     position: relative;
     align-items: center;
@@ -244,7 +244,7 @@ border:none
     right: 270px;
     background-color: transparent;
     border: none
-  }
+  } */
 
 
 
@@ -275,4 +275,8 @@ border:none
 
 .detail__container img {
   width: 50%;
+}
+
+.detail__container * {
+  color: #fff;
 }

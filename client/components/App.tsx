@@ -8,6 +8,8 @@ import Searchbar from './Searchbar'
 import Movie from './Movie'
 
 const App = () => {
+  const [search, setSearch] = useState("")
+
   useEffect(() => {
     getPopularMovies().catch((err) => {
       console.log(err)
@@ -16,25 +18,20 @@ const App = () => {
 
   return (
     <>
-
       <div className="background">
-        <Searchbar />
-
+        <Searchbar search={search} setSearch={setSearch} />
         <Navbar />
-
         <Routes>
-          <Route path="/" element={<Landing />} />
-
+          <Route path="/" element={<Landing search={search} />} />
           <Route
             path="/:genre"
             element={
-              <Movies setApi={(genre: number) => getMovieByGenre(genre)} />
+              <Movies setApi={(genre: number) => getMovieByGenre(genre)} search={search} />
             }
           />
           <Route path="/movies/:id" element={<Movie />} />
         </Routes>
       </div>
-
     </>
   )
 }
