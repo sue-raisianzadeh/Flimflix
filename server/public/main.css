@@ -26,13 +26,16 @@ h2 {
 
 /* Landing Page Style */
 
-.backgroud {
-  background-color: rgb #5A2971;
+.background {
+  background-color: #431459;
 }
 
-/* .logo {
-  background-color: #321142;
-} */
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
 
 
 /* Movie List Style */
@@ -45,15 +48,16 @@ h2 {
 
   margin-left: 200px;
   padding: 1px 16px;
-  height: 1000px;
+
 
 }
 
 .list__container>div {
+  background-color:#e2d7fd;
   width: 25%;
   margin-bottom: 3rem;
-  border: 1px solid #FF3F00;
-  padding: 1rem;
+  border: 1px solid #ffffff;
+  padding: 2rem;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -102,18 +106,20 @@ h2 {
 
 .searchForm{
   width: 80%;
-  display: flex;
   position: relative;
   align-items: center;
+  display: block;
+  margin: 10px auto;
 }
 
 .searchBar{
-  height: 40px;
+  height: 50px;
   width: 100%;
   padding:20px;
   border:1px solid grey;
   border-radius: 20px;
   font-size: 20px;
+  
 }
 .searchBar:focus{
   outline: none;
