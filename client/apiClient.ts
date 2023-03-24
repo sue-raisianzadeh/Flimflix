@@ -18,6 +18,7 @@ export async function getMovieByGenre(genreID: number) {
   return response.body.results
 }
 
+
 export async function getMovieByID(id: number) {
   const response = await request.get(`https://api.themoviedb.org/3/movie/${id}?api_key=ccc52bbb3a8aacd51522e744f91ea5a0&language=en-US`)
   return response.body
@@ -29,3 +30,9 @@ export async function getMovieByID(id: number) {
 // Comedy: 35
 // Science Fiction: 878
 // Romance: 10749
+
+
+
+
+ 
+

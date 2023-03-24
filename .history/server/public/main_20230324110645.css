@@ -1,0 +1,74 @@
+
+/* Global Styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+
+/* Movie List Style */
+.list__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+
+.list__container > div {
+  width: 30%;
+  margin-bottom: 3rem;
+  border: 1px solid #FF3F00;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.list__container > div > * {
+  margin-bottom: 1.5rem;
+}
+
+
+/* NavBar Style */
+.sidenav{
+
+  background-color: darkslategray;
+  color: aliceblue;
+  width: 150px;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+/* serachBar style */
+
+.searchForm{
+  display: flex;
+}
+
+.searchBar{
+  height: 30px;
+  width: 80%;
+  border:1px solid grey;
+  border-radius: 15px;
+}
+.searchBar:focus{
+  outline: none;
+}
+
+.sumbitButton{
+width: 30px;
+height: 30px;
+background-color: transparent;
+border:none
+}

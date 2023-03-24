@@ -1,55 +1,47 @@
-import React from 'react'
-import Movie from './Movie'
+
+
 import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { Movie } from '../../Model/Movie'
+import { getMovieByGenre } from '../apiClient'
 
-const movieList = [
-  {
-    id: '236',
-    title: 'Superman',
-    original_language: 'English',
-    poster_path: 'https://123.123',
-    overview: 'description example',
-    vote_average: 4.5,
-  },
-  {
-    id: '3214',
-    title: 'Batman',
-    original_language: 'English',
-    poster_path: 'https://123.123',
-    overview: 'description example',
-    vote_average: 5,
-  },
-  {
-    id: '1344',
-    title: 'Spiderman',
-    original_language: 'English',
-    poster_path: 'https://123.123',
-    overview: 'description example',
-    vote_average: 6,
-  },
-  {
-    id: '1432',
-    title: 'Superman',
-    original_language: 'English',
-    poster_path: 'https://123.123',
-    overview: 'description example',
-    vote_average: 7,
-  },
-]
+interface Props {
+  setApi: (genre: number) => Promise<any>
+}
 
-const Movies = () => {
+const Movies = (props: Props) => {
+  const imageBaseUrl = 'https://image.tmdb.org/t/p/w780'
+  const [movieList, setMovieList] = useState([])
+  const [genre, setGenre] = useState(0)
+  const {genre: param}  = useParams()
+
+
+  useEffect(() => {
+    console.log(param)
+    setGenre(Number(param))
+    if (genre) {
+      props.setApi(genre).then((res) => {
+        setMovieList(res)
+        console.log(res)
+      })
+    }
+  }, [param, genre])
+  
   return (
     <div>
       <div className="list__container">
-        {movieList.map((movie, i) => (
-          <div key={i}>
-            <h1>Title: {movie.title}</h1>
-            <h2>Language: {movie.original_language}</h2>
-            <img src="" alt="" />
-            <p>Overview: {movie.overview}</p>
-            <Link to={`/movies/${movie.id}`}>More Details</Link>
-          </div>
-        ))}
+
+        {movieList.length &&
+          movieList.map((movie: Movie, i) => (
+            <div key={i}>
+
+              <h1>{movie.title}</h1>
+              <h3>Rates: {movie.vote_average}</h3>
+
+              <img src={imageBaseUrl + movie.poster_path} alt="" />
+            </div>
+          ))}
       </div>
     </div>
   )
