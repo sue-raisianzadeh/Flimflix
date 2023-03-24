@@ -5,7 +5,7 @@ import Movies from './Movies'
 
 
 const Landing = () => {
-  const nothing = ""
+
   return (
     <div>
 
@@ -17,7 +17,7 @@ const Landing = () => {
       
 
 
-      <Movies setApi={(nothing) => getPopularMovies()} />
+      <Movies setApi={() => getPopularMovies()} />
 
 
     </div>

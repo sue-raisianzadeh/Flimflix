@@ -16,6 +16,7 @@ const App = () => {
 
   return (
     <>
+
       <div className="background">
         <Searchbar />
 
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/movies/:id" element={<Movie />} />
         </Routes>
       </div>
+
     </>
   )
 }
