@@ -9,6 +9,9 @@ const Movie = () => {
   const [ID, setID] = useState(parsedId)
   const [data, setData] = useState('')
 
+  const imageBaseUrl = 'https://image.tmdb.org/t/p/w780'
+
+
   useEffect(() => {
     // getMovieByID(Number(id)).then((data) => {console.log(data)}).catch((err) => {
     //   console.log(err)
@@ -25,7 +28,7 @@ const Movie = () => {
   }, [ID])
 
   return (
-    <div>
+    <div className='detail__container' style={{marginLeft: "200px"}}>
       <h3>{data.title}</h3>
       <p>
         <i>{data.tagline}</i>
@@ -33,6 +36,7 @@ const Movie = () => {
       <p>Popularity: {data.popularity}</p>
       <p>Date of release: {data.release_date}</p>
       <p>Overview: {data.overview}</p>
+      <img src={imageBaseUrl + data.poster_path} alt="" />
     </div>
   )
 }

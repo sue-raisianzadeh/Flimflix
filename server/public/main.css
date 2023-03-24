@@ -219,3 +219,21 @@ border:none
   }
 
 }
+
+
+/* Movie Detail Page */
+.detail__container {
+  margin:1.5rem;
+}
+
+.detail__container h3 {
+  font-size: 4rem;
+}
+
+.detail__container > *{
+  margin-bottom: 2.5rem;
+}
+
+.detail__container img {
+  width: 50%;
+}

@@ -36,11 +36,12 @@ const Movies = (props: Props) => {
       <div className="list__container">
         {movieList.length &&
           movieList.map((movie: MovieType, i) => (
-            <div key={i}>
+            <div key={i} >
               <h1>{movie.title}</h1>
               <h3>Rates: {movie.vote_average}</h3>
 
               <img src={imageBaseUrl + movie.poster_path} alt="" />
+              <a href={`/movies/${movie.id}`}>View Detail</a>
             </div>
           ))}
       </div>
