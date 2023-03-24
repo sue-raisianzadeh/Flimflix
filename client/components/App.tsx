@@ -7,44 +7,31 @@ import Navbar from './Navbar'
 import Searchbar from './Searchbar'
 import Movie from './Movie'
 
-
 const App = () => {
-
-
-  
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
-
-    getPopularMovies()
-
-      .catch((err) => {
-        console.log(err)
-
-      })
-
-  
-
+    getPopularMovies().catch((err) => {
+      console.log(err)
+    })
   }, [])
 
   return (
     <>
-      <Navbar />
-      <Searchbar />
-
-
-
-
-      
-
-      <Routes >
-        <Route path='/' element={<Landing />} />
-
-        <Route path='/:genre' element={<Movies setApi={(genre: number) => getMovieByGenre(genre)} />} />
-        <Route path="/movies/:id" element={<Movie />} />
-
-
-      </Routes>
-
+      <div className="background">
+        <Searchbar search={search} setSearch={setSearch} />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing search={search} />} />
+          <Route
+            path="/:genre"
+            element={
+              <Movies setApi={(genre: number) => getMovieByGenre(genre)} search={search} />
+            }
+          />
+          <Route path="/movies/:id" element={<Movie />} />
+        </Routes>
+      </div>
     </>
   )
 }
