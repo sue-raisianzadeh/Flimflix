@@ -11,7 +11,6 @@ const Movie = () => {
 
   const imageBaseUrl = 'https://image.tmdb.org/t/p/w780'
 
-
   useEffect(() => {
     // getMovieByID(Number(id)).then((data) => {console.log(data)}).catch((err) => {
     //   console.log(err)
@@ -28,8 +27,9 @@ const Movie = () => {
   }, [ID])
 
   return (
-    <div className='detail__container' style={{marginLeft: "200px"}}>
+    <div className="detail__container" style={{ marginLeft: '200px' }}>
       <h3>{data.title}</h3>
+
       <p>
         <i>{data.tagline}</i>
       </p>

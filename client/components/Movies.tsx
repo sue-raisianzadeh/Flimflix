@@ -1,7 +1,3 @@
-
-
-
-
 import Movie from './Movie'
 
 import { Link } from 'react-router-dom'
@@ -21,15 +17,14 @@ const Movies = (props: Props) => {
   const { genre: param } = useParams()
 
   useEffect(() => {
-
     setGenre(Number(param))
     if (genre) {
       props.setApi(genre).then((res) => {
         setMovieList(res)
         console.log(res)
       })
-    } else if(!param) {
-      props.setApi().then(res => {
+    } else if (!param) {
+      props.setApi().then((res) => {
         setMovieList(res)
         console.log(res)
       })
@@ -41,9 +36,9 @@ const Movies = (props: Props) => {
       <div className="list__container">
         {movieList.length &&
           movieList.map((movie: MovieType, i) => (
-            <div key={i} >
+            <div key={i}>
               <h1>{movie.title}</h1>
-              <h3>Rates: {movie.vote_average}</h3>
+              <h3> ⭐ Rating: {movie.vote_average}</h3>
 
               <img src={imageBaseUrl + movie.poster_path} alt="" />
               <a href={`/movies/${movie.id}`}>View Detail</a>

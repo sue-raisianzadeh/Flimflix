@@ -43,7 +43,7 @@ const Navbar = () => {
       <nav>
         <ul>
           <li>
-            <Link to={"/"}> Home </Link>
+            <Link to={'/'}> Home </Link>
           </li>
           <li>
             {genreList.map((genre) => (
