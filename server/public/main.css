@@ -99,6 +99,34 @@ h2 {
 
 
 
+
+.searchForm{
+  width: 80%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.searchBar{
+  height: 40px;
+  width: 100%;
+  padding:20px;
+  border:1px solid grey;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.searchBar:focus{
+  outline: none;
+}
+
+.sumbitButton{
+width: 30px;
+height: 30px;
+position: absolute;
+right:10px;
+background-color: transparent;
+border:none
+}
 /* sidenav links */
 .sidenav a {
   display: block;
@@ -190,4 +218,22 @@ h2 {
     }
   }
 
+}
+
+
+/* Movie Detail Page */
+.detail__container {
+  margin:1.5rem;
+}
+
+.detail__container h3 {
+  font-size: 4rem;
+}
+
+.detail__container > *{
+  margin-bottom: 2.5rem;
+}
+
+.detail__container img {
+  width: 50%;
 }
