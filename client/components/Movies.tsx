@@ -3,7 +3,7 @@ import Movie from './Movie'
 import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Movie } from '../../Model/Movie'
+import { MovieType } from '../../Model/Movie'
 import { getMovieByGenre } from '../apiClient'
 
 interface Props {
@@ -34,7 +34,7 @@ const Movies = (props: Props) => {
 
         {movieList.length &&
 
-          movieList.map((movie: Movie, i) => (
+          movieList.map((movie: MovieType, i) => (
             <div key={i}>
 
               <h1>{movie.title}</h1>

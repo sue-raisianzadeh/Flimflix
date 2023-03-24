@@ -6,7 +6,7 @@ import Movies from './Movies'
 import Navbar from './Navbar'
 import Searchbar from './Searchbar'
 import Movie from './Movie'
-import { Route, Routes } from 'react-router-dom'
+
 
 const App = () => {
 
