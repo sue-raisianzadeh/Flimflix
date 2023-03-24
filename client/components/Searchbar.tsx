@@ -1,3 +1,7 @@
+
+
+import { useParams } from 'react-router-dom'
+
 import React, { useEffect, useState } from 'react'
 
 interface Props {
@@ -13,6 +17,7 @@ const Searchbar = (props: Props) => {
   //   console.log(props.search)
   // }, [props.search])
 
+
   return (
     <div>
       <div>
@@ -22,7 +27,15 @@ const Searchbar = (props: Props) => {
           alt="DevFlicks Logo"
         />
       </div>
+         <hr></hr>
+      <div className="subtitle">
+        <h2>
+          🍿 Need help deciding what to watch? Choose a genre for suggestions!
+          🍿
+        </h2>
+      </div>
       <form className="searchForm">
+      
         <input className="searchBar" type="text" value={props.search} onChange={(e) => props.setSearch(() => e.target.value)} />
         <button className="sumbitButton" type="submit">
           <svg
@@ -41,6 +54,7 @@ const Searchbar = (props: Props) => {
           </svg>
         </button>
       </form>
+
     </div>
   )
 }

@@ -40,20 +40,18 @@ const genreList = [
 const Navbar = () => {
   return (
     <div className="sidenav">
-      <nav>
-        <ul>
-          <li>
-            <Link to={"/"}> Home </Link>
-          </li>
-          <li>
-            {genreList.map((genre) => (
-              <Link key={genre.id} to={`/${genre.id}`}>
-                {genre.name}
-              </Link>
-            ))}
-          </li>
-        </ul>
-      </nav>
+      <ul>
+        <li>
+          <Link to={'/'}> Home </Link>
+        </li>
+        <li>
+          {genreList.map((genre) => (
+            <Link key={genre.id} to={`/${genre.id}`}>
+              {genre.name}
+            </Link>
+          ))}
+        </li>
+      </ul>
     </div>
   )
 }

@@ -1,3 +1,9 @@
+
+import Movie from './Movie'
+
+import { Link } from 'react-router-dom'
+
+
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { MovieType } from '../../Model/Movie'
@@ -32,13 +38,14 @@ const Movies = (props: Props) => {
     <div>
       <div className="list__container">
         {movieList.length &&
+
           movieList.map((movie: MovieType, i) => {
             if (props.search.length) {
               return (
                 movie.title.toLocaleLowerCase().includes(props.search.toLocaleLowerCase()) && (
                   <div key={i}>
                     <h1>{movie.title}</h1>
-                    <h3>Rates: {movie.vote_average}</h3>
+                    <h3>⭐Rates: {movie.vote_average}</h3>
 
                     <img src={imageBaseUrl + movie.poster_path} alt="" />
                     <a href={`/movies/${movie.id}`}>View Detail</a>
@@ -50,6 +57,7 @@ const Movies = (props: Props) => {
                 <div key={i}>
                   <h1>{movie.title}</h1>
                   <h3>Rates: {movie.vote_average}</h3>
+
 
                   <img src={imageBaseUrl + movie.poster_path} alt="" />
                   <a href={`/movies/${movie.id}`}>View Detail</a>
