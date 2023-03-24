@@ -40,7 +40,7 @@ const App = () => {
         <Route path='/' element={<Landing />} />
 
         <Route path='/:genre' element={<Movies setApi={(genre: number) => getMovieByGenre(genre)} />} />
-                <Route path="/movies/:id" element={<Movie />} />
+        <Route path="/movies/:id" element={<Movie />} />
 
 
       </Routes>
